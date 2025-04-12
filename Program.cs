@@ -2,6 +2,7 @@
 
 Console.Clear();
 
+
 Console.WriteLine("Digite seu peso em kg: ");
 double peso = Convert.ToDouble(Console.ReadLine());
 
