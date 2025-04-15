@@ -1,20 +1,17 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-Console.Clear();
-
+﻿Console.Clear();
 
 Console.WriteLine("Digite seu peso em kg: ");
 double peso = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Digite sua altura em m: ");
-double altura = Convert.ToDouble(Console.ReadLine());
+string alturastring = Console.ReadLine()!.Replace(".", ",");
+double altura = double.Parse(alturastring); //Converte uma string em double
 
-double result1IMC = altura * altura;
-double resultIMC = peso / result1IMC;
+double resultIMC = peso / (altura * altura);
 
 if (resultIMC <17)
 {
-    Console.WriteLine("Muito a baixo do peso"); //substituir por uma string
+    Console.WriteLine("Muito a baixo do peso"); 
 }
 
 else if (resultIMC <18.5 )
